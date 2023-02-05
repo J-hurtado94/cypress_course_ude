@@ -1,0 +1,15 @@
+{
+  "name": "cypress_course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open --e2e --browser chrome"
+  },
+  "author": "Juan Carlos Hurtado",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.5.1",
+    "typescript": "^4.9.5"
+  }
+}

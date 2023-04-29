@@ -1,6 +1,7 @@
 
  {
      "compilerOptions": {
+      "baseUrl": "e2e",
       "target": "es5",
        "lib": ["es5", "dom"],
        "types": ["cypress", "node"]

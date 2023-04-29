@@ -4,6 +4,8 @@ pipeline {
   parameters{
     string(name:"SPEC",defaultValue:"cypress/e2e/**/**",description:"cypress/e2e/*.spec.ts")
     choice(name:"BROWSER",choices:['chrome','edge','firefox'],description:"escoja un browser donde ejecutar")
+    choice(name:"EJECUTAR",choices:'test',description:"ejecutar")
+  }
   }
   options{
     ansiColor('xterm')
@@ -19,7 +21,7 @@ pipeline {
         steps{
             bat "npx cypress cache path"
             bat "npm install"
-            bat "npx cypress open --browser ${BROWSER}  ${SPEC}"
+           // bat "npx cypress open --browser ${BROWSER}  ${SPEC}"
         }
     }
     stage('Deploy app'){

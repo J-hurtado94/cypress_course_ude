@@ -1,5 +1,6 @@
 pipeline {
   agent any 
+  
   parameters{
     string(name:"SPEC",defaultValue:"cypress/e2e/**/**",description:"cypress/e2e/*.spec.ts")
     choice(name:"BROWSER",choices:['chrome','edge','firefox'],description:"escoja un browser donde ejecutar")

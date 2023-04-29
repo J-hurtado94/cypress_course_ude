@@ -20,7 +20,6 @@ pipeline {
             bat "npx cypress cache path"
             bat "npm install"
             bat "npx cypress install"
-            bat "npm install typescript"
             bat "npx cypress open --browser ${BROWSER}  ${SPEC}"
         }
     }

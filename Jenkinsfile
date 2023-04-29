@@ -19,7 +19,6 @@ pipeline {
         steps{
             bat "npx cypress cache path"
             bat "npm install"
-            bat "npx cypress install"
             bat "npx cypress open --browser ${BROWSER}  ${SPEC}"
         }
     }

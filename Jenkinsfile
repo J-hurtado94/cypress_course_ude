@@ -20,7 +20,7 @@ pipeline {
             
             bat "npm install"
             bat "npx cypress install"
-            bat "npx cypress open --browser ${BROWSER}  ${SPEC}"
+            bat "npx cypress open --browser ${BROWSER} --spec ${SPEC}"
         }
     }
     stage('Deploy app'){

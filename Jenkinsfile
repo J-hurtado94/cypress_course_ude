@@ -1,6 +1,5 @@
 pipeline {
-  agent {
-    any 
+  agent any 
   parameters{
     string(name:"SPEC",defaultValue:"cypress/e2e/**/**",description:"cypress/e2e/*.spec.ts")
     choice(name:"BROWSER",choices:['chrome','edge','firefox'],description:"escoja un browser donde ejecutar")
@@ -32,5 +31,4 @@ pipeline {
         publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
     }
   }
-}
 }

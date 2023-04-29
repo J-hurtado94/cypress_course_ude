@@ -17,10 +17,10 @@ pipeline {
     }
     stage('testing'){
         steps{
-            
+            bat "npx cypress cache path"
             bat "npm install"
             bat "npx cypress install"
-            bat "npx cypress open --browser ${BROWSER} --spec ${SPEC}"
+            bat "npx cypress open --browser ${BROWSER}  ${SPEC}"
         }
     }
     stage('Deploy app'){

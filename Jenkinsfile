@@ -19,7 +19,7 @@ pipeline {
         steps{
             bat "npx cypress cache path"
             bat "npm install"
-            bat "npm cypress open --browser ${BROWSER}  ${SPEC}"
+            bat "npm run cypress open --browser ${BROWSER}  ${SPEC}"
         }
     }
     stage('Deploy app'){

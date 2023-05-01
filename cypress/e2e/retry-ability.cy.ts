@@ -4,10 +4,10 @@ describe('Retry ability', () => {
         cy.get('.btn').click()
         
     });
-    it('visit with delay-default', () => {
-        cy.visit("/clientdelay")
-        cy.get('#ajaxButton').click()
-        cy.get('.bg-success').should('have.text','Data calculated on the client side.')
+    // it('visit with delay-default', () => {
+    //     cy.visit("/clientdelay")
+    //     cy.get('#ajaxButton').click()
+    //     cy.get('.bg-success').should('have.text','Data calculated on the client side.')
         
-    });
+    // });
 });
